@@ -2,12 +2,12 @@
 Cette classe décrit un animal
  */
 
-public class animal {
+abstract public class animal {
 
     public String nom;
     public int age;
 
-    public void parler();
+    abstract public void parler() = 0;
 
 }
 
