@@ -1,6 +1,15 @@
+/*
+Cette classe gère des commandes
+ */
+
 public class CommandeManager {
-    public void traiterCommande(String status, boolean estUrgente, double montant) {
-        if (status.equals("NOUVELLE")) {
+    String status;
+    boolean estUrgente;
+    double montant;
+
+    public void traiterCommande() {
+
+        if (commandeEstNouvelle()) {
             if (estUrgente) {
                 System.out.println("Traiter la commande immédiatement.");
             } else {
@@ -16,4 +25,12 @@ public class CommandeManager {
             System.out.println("Statut de commande inconnu.");
         }
     }
+
+    public boolean commandeEstNouvelle(){
+        return status.equals("NOUVELLE");
+    }
+
+    public 
+
+
 }
