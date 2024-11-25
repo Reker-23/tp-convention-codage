@@ -1,12 +1,12 @@
 public class Calculateur {
-    public double calculerPourClientNormal(double montant) {
-        double total = montant * 1.2; // TVA 20%
-        return total;
-    }
+    boolean vip;
+    public double calculerPourClient(double montant){
+        montant += montant * 1.2;// TVA 20%
 
-    public double calculerPourClientVIP(double montant) {
-        double total = montant * 1.2; // TVA 20%
-        total -= montant * 0.1; // Réduction 10%
-        return total;
+        if(vip){
+            montant *=0.9;// Réduction 10%
+        }
+        return montant;
     }
 }
+
